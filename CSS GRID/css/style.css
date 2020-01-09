@@ -1,0 +1,147 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: black;
+	font-size: 100%;
+	border: none;
+	outline: none;
+	font-weight: 300;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+}
+.container {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 20vh 1fr 30vh;
+	grid-template-areas: "header header" "main main" "footer footer";
+
+}
+/* CABEÇALHO */
+header {display: grid;
+	background-color: rgb(62,62,62);
+	grid-area: header;
+	align-items: center;
+
+}
+header > .container-header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 20vh 20vh;
+}
+.container-header > div {
+
+}
+div > .container-logo {
+
+	background: url(../img/logo.png) no-repeat;
+}
+div > .container-btn {
+	display: grid;
+	justify-items: end;
+	align-items: center;
+	background-color:  rgb(62,62,62);
+	
+}
+.btn-menu {
+	width: 56px;
+	height: 56px;
+	text-align: center;
+	color: #fff;
+	background: linear-gradient(to right, #00C896, #3E3E3E);
+	border-radius: 56px;
+	cursor: pointer;
+
+}
+.btn-close {
+	font-size: 1.5em;
+
+	color: #fff;
+	cursor: pointer;
+	margin: 2% 3% 0 0;
+}
+.container-btn > .btn-close {
+	justify-items: end;
+}
+/*NAV */
+.menu {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: rgba(0,0,0,0.9);
+	top: 0;
+	left: 0;
+}
+.menu ul {
+	width: 100%;
+
+	text-align: center;
+}
+.menu li {
+	padding: 1.5%;
+}
+.menu li a {
+	font-size: 2em;
+	color: #fff;
+	padding: 1.5% 3%;
+}
+.menu li a:hover {
+	border: 1px solid #da6709;
+}
+/* CONTEUDO */
+main {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	background-color: #fff;
+	grid-area: main;
+    justify-items: center;
+    align-items: center;
+}
+/* BANNER */
+.banner {
+	width: 100%;
+	background: url(../img/banner1.jpg) no-repeat fixed;
+}
+/* TEXTOS */
+main > .texto {
+	
+}
+main > .texto div {
+	display: grid;
+	justify-items: center;
+}
+	.ico {
+		color:  rgb(0,200,150);
+		font-size: 2em;
+		text-align: center;
+		
+	}
+main > .texto2 {
+    
+}
+main > .texto3 {
+    
+}
+h1 {
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 300;
+    color: rgb(62,62,62);
+    font-family: 'Roboto', sans-serif;
+}
+/* TEXTOS FIM */
+
+/* RODAPÉ */
+footer {
+	background-color: red;
+	grid-area: footer;
+}
